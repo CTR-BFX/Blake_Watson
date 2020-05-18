@@ -61,7 +61,7 @@ R script [SV_SNPs_Fig1A_SFig3C_3D.R](Scripts/SV_SNPs_Fig1A_SFig3C_3D.R)
 ## ChIP-Seq and ATAC-Seq Analysis <br>
 ### Step1: Data availability(Supplementary files 2), relating published reference:
 #### Mouse: Epiblast (Epi) and extraembryonic ectoderm (ExE) from E6.5,  ChIPSeq (GSE84236, mm9, THSS)
-* Zachary D. smith, Jiantao shi, Hongcang Gu, Julie Donaghey, Kendell Clement, Davide Cacchiarelli, Andreas Gnirke, Franziska michor & Alexander meissner [[DOI](doi:10.1038/nature23891)]
+* Zachary D. smith, Jiantao shi, Hongcang Gu, Julie Donaghey, Kendell Clement, Davide Cacchiarelli, Andreas Gnirke, Franziska michor & Alexander meissner [[DOI](doi: 10.1038/nature23891)]
 #### Mouse: Sperm ChIPSeq  (GSE79230, mm9)
 * Jung YH, Sauria MEG, Lyu X, Cheema MS, Ausio J, Taylor J, Corces VG.[DOI](doi: 10.1016/j.celrep.2017.01.034.)]
 #### Mouse: trophoblast stem cells (TSCs) and embryonic stem cells (ESCs) ChIPSeq (Supplementary Files 2, mm10)
