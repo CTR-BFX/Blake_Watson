@@ -363,7 +363,7 @@ DMRs total number reduced from 893 to 459, (Mtrr<sup>{+/gt}</sup>, Mtrr<sup>{+/+
 | DataType  | Accession | Link |
 | ----- | --- | ---|
 | Mtrr MeDIP Data | E-MTAB-8533 | [E-MTAB-8533](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-8533/) |
-| Mtrr WGS Data | [E-MTAB-8513]|E-MTAB-8513](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-8513) |
+| Mtrr WGS Data | [E-MTAB-8513]|[E-MTAB-8513](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-8513) |
 
 
 
