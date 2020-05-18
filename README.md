@@ -9,6 +9,7 @@ Russell Hamilton<sup>2,3</sup>, and Erica D. Watson<sup>1,2*</sup>** <br>
 
 ### Publication ###
 
+<<<<<<< HEAD
 Georgina E.T. Blake, Xiaohui Zhao, Hong wa Yung, Graham J. Burton, Anne C.Ferguson-Smith, Russell S. Hamilton and Erica D. Watson (2020) Genetic disruption of folate metabolism causes epigenetic instability in sperm and distinguishes HIRA as a biomarker of maternal epigenetic inheritance.
 
 Code Release to accompany paper:
@@ -20,6 +21,18 @@ Code Release to accompany paper:
 ### SNPs (single nucleotide polymorphisms) and SVs (structure variants) calling for C57BI/6J control embryos and Mtrr<sup>{gt/gt}</sup> embryos
 
 #### Sequencing Data Quality Control (FastQC, v0.11.5), Adapter trimming (Trim_galore, v0.6.4) and report summary (MultiQC, v1.4);
+=======
+Georgina E.T. Blake, Xiaohui Zhao, Hong wa Yung, Graham J. Burton, Anne C.Ferguson-Smith, Russell S. Hamilton and Erica D. Watson (2020) Genetic disruption of folate metabolism causes epigenetic instability in sperm and distinguishes HIRA as a biomarker of maternal epigenetic inheritance. <s>[[xx]](http://www.xx) [[DOI]](https://doi.org/xx)</s>
+
+Code Release to accompany paper: <s>[[DOI](xx)](xx)</s>
+
+
+## Whole Genome Sequencing Analysis (WGS) <br>
+ C57BI/6J (Control-1, Control-2), Mtrr<sup>{gt/gt}</sup> (800-1, 800-2, 800-3, 800-4, 800-5 and 800-6)
+### Part I: Whole Genome Sequencing (WGS) SNPs (singlenucleotide polymorphisms) calling for C57BI/6J control embryos and Mtrr<sup>{gt/gt}</sup> embryos
+
+#### Sequencing Data Quality Control (FastQC, v0.11.5), Adapter trimming (Trim_galore, v0.6.4) and report summary (MultiQC, v.1.4);
+>>>>>>> a98c53aa9df94d9d5074a3bb37acf52611df6de7
 
 #### Sequencing Aligned to the C57Bl/6J reference genome(GRCm38, mm10) using Bowtie2(v2.3.4) with default parameters;
 
@@ -237,7 +250,11 @@ Example command line as used in clusterflow:
 
 
 
+<<<<<<< HEAD
 #### SNPs filter using vcftools (vcf-annotate), [Merge_Filter_Snp_Annotation.sh](https://github.com/xz289/Blake_Watson/blob/master/Scripts/Merge_Filter_Snp_Annotation.sh) <br>
+=======
+#### Step 6: SNPs filter using vcftools (vcf-annotate, [Merge_Filter_Snp_Annotation.sh](https://github.com/xz289/Blake_Watson/blob/master/Scripts/Merge_Filter_Snp_Annotation.sh) <br>
+>>>>>>> a98c53aa9df94d9d5074a3bb37acf52611df6de7
        - [x] 1-StrandBias [0.0001] ---Min P-value for strand bias
        - [x] 2-BaseQualBias [0.0002] ---Min P-value for BaseQ bias
        - [x] 3-MapQualBias [0.00001] ---Min P-value for mapQ bias
