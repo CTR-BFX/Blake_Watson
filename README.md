@@ -1,6 +1,5 @@
 # Genetic disruption of folate metabolism causes epigenetic instability in sperm and distinguishes HIRA as a biomarker of maternal epigenetic inheritance
-**Georgina E.T. Blake<sup>1,2,†</sup>, Xiaohui Zhao<sup>1,2</sup>, Hong wa Yung<sup>1,2</sup>,Graham J. Burton<sup>1,2</sup>,Anne C.Ferguson-Smith<sup>2,3</sup>,
-Russell Hamilton<sup>2,3</sup>, and Erica D. Watson<sup>1,2*</sup>** <br>
+**Georgina E.T. Blake<sup>1,2,†</sup>, Xiaohui Zhao<sup>1,2</sup>, Hong wa Yung<sup>1,2</sup>, Graham J. Burton<sup>1,2</sup>, Anne C.Ferguson-Smith<sup>2,3</sup>, Russell S. Hamilton<sup>2,3</sup> and Erica D. Watson<sup>1,2*</sup>** <br>
 <sup>1</sup> Department of Physiology, Development and Neuroscience, University of Cambridge, Cambridge, UK <br>
 <sup>2</sup> Centre for Trophoblast Research, University of Cambridge, Cambridge UK<br>
 <sup>3</sup> Department of Genetics, University of Cambridge, Cambridge, UK<br>
@@ -49,6 +48,12 @@ Example command line as used in clusterflow:
         VALIDATION_STRINGENCY=LENIENT
 
 ### Mtrr region masking;
+
+> Make a bed file for the 20Mb masked region
+
+    cat "13     58060780        80060780" > chr13-mtrr-mask-region_20Mb.bed
+
+> Use samtools to mask region
 
     PROJECT="CTR_edw23_0001"
     BEDFILE="chr13-mtrr-mask-region_20Mb.bed"
@@ -359,15 +364,15 @@ DMRs total number reduced from 893 to 459, (Mtrr<sup>{+/gt}</sup>, Mtrr<sup>{+/+
 | Cwc27 | [Cwc27_refined_IGV_snapshot.png](Figures/Cwc27_refined_IGV_snapshot.png) |
 | Tshz3  | [Tshz3_refined_IGV_snapshot.png](Figures/Tshz3_refined_IGV_snapshot.png) |
 
-## Data AarrayExpress Link
+## Data Array Express Link
 | DataType  | Accession | Link |
 | ----- | --- | ---|
 | Mtrr MeDIP Data | E-MTAB-8533 | [E-MTAB-8533](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-8533/) |
-| Mtrr WGS Data | [E-MTAB-8513]|[E-MTAB-8513](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-8513) |
+| Mtrr WGS Data | E-MTAB-8513 |[E-MTAB-8513](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-8513) |
 
 
 
-````
+
 
 ## Contact
 
