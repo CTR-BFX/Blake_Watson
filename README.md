@@ -28,7 +28,7 @@ Code Release to accompany paper: [![DOI](xx)](xx)
      - [x] CombineVariants
      - [x] VariantRecalibrator
      - [x] ApplyRecalibration
-#### Step 6: SNPs filter using vcftools (vcf-annotate) <br>
+#### Step 6: SNPs filter using vcftools (vcf-annotate,[a link][a link] https://github.com/xz289/Blake_Watson/blob/master/Scripts/Merge_Filter_Snp_Annotation.sh ) <br>
        - [x] 1-StrandBias [0.0001] ---Min P-value for strand bias
        - [x] 2-BaseQualBias [0.0002] ---Min P-value for BaseQ bias
        - [x] 3-MapQualBias [0.00001] ---Min P-value for mapQ bias
@@ -42,15 +42,19 @@ Code Release to accompany paper: [![DOI](xx)](xx)
        - [x] w-SnpGap [5] ---SNP within 5bp around a gap to be filtered
        - [x] H-HWE [0.0001] ---Min P-value for HWE(Hardy–Weinberg equilibrium) and (F\<0)
        - [x] v-VDB [0] ---Min Variant Distance bias
-#### Filtering the repeatitive and defind Heterozygous SNPs. <br>
+#### Filtering the repeatitive and defind Heterozygous SNPs. [a link] https://github.com/xz289/Blake_Watson/blob/master/Scripts/Exclued_SNPs_Homo_Dinu_SegDup_Het.R <br>
       Reference: Oey, H., Isbel, L., Hickey, P., Ebaid, B. & Whitelaw, E. Genetic and epigenetic variation among inbred mouse littermates: identification of inter-individual differentially methylated regions. Epigenetics Chromatin 8, 54 (2015). <br>
        - [x] Simple repeats periodicity < 9bp;
        - [x] Homopolymer repeats >8 bp;
        - [x] dinucleotide repeats >14 bp;
        - [x] low mapping quality (<40);
        - [x] Heterozygous variant call counts > 3 within 10kb window, overlap with segment duplication or repeats;
+### Part II: Whole Genome Sequencing (WGS) SV (structure variant) calling for C57BI/6J control embryos and Mtrr^{gt/gt} embryos
+
 
 ## MeDIP Data Analysis <br>
+
+## ChIP-Seq and ATAC-Seq Analysis
 
 
 
