@@ -10,7 +10,7 @@
 
 Georgina E.T. Blake, Xiaohui Zhao, Hong wa Yung, Graham J. Burton, Anne C.Ferguson-Smith, Russell S. Hamilton and Erica D. Watson (2020) Genetic disruption of folate metabolism causes epigenetic instability in sperm and distinguishes HIRA as a biomarker of maternal epigenetic inheritance.
 
-Code Release to accompany paper:
+Code Release to accompany paper:[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3832249.svg)](https://doi.org/10.5281/zenodo.3832249)
 
 
 ## Whole Genome Sequencing Analysis (WGS) <br>
