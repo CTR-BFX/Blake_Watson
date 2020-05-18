@@ -322,6 +322,7 @@ The resulting bed file is the output from `bedtools coverage` with the following
 
 
 
+
 ## ChIP-Seq and ATAC-Seq Analysis <br>
 ### Step1: Data availability(Supplementary files 2), relating published reference:
 #### Mouse: Epiblast (Epi) and extraembryonic ectoderm (ExE) from E6.5,  ChIPSeq (GSE84236, mm9, THSS)
