@@ -359,6 +359,11 @@ DMRs total number reduced from 893 to 459, (Mtrr<sup>{+/gt}</sup>, Mtrr<sup>{+/+
 | Cwc27 | [Cwc27_refined_IGV_snapshot.png](Figures/Cwc27_refined_IGV_snapshot.png) |
 | Tshz3  | [Tshz3_refined_IGV_snapshot.png](Figures/Tshz3_refined_IGV_snapshot.png) |
 
+## Data AarrayExpress Link
+| DataType  | Accession | Link |
+| ----- | --- | ---|
+| Mtrr MeDIP Data | E-MTAB-8533 | [E-MTAB-8533](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-8533/) |
+| Mtrr WGS Data | [E-MTAB-8513](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-8513) |
 
 
 
