@@ -9,32 +9,19 @@ Russell Hamilton<sup>2,3</sup>, and Erica D. Watson<sup>1,2*</sup>** <br>
 
 ### Publication ###
 
-<<<<<<< HEAD
 Georgina E.T. Blake, Xiaohui Zhao, Hong wa Yung, Graham J. Burton, Anne C.Ferguson-Smith, Russell S. Hamilton and Erica D. Watson (2020) Genetic disruption of folate metabolism causes epigenetic instability in sperm and distinguishes HIRA as a biomarker of maternal epigenetic inheritance.
 
 Code Release to accompany paper:
 
 
 ## Whole Genome Sequencing Analysis (WGS) <br>
- -[x] Samples: C57BI/6J (Control-1, Control-2), Mtrr<sup>{gt/gt}</sup> (800-1, 800-2, 800-3, 800-4, 800-5 and 800-6)
+ - [x] Samples: C57BI/6J (Control-1, Control-2), Mtrr<sup>{gt/gt}</sup> (800-1, 800-2, 800-3, 800-4, 800-5 and 800-6)
+ - [x] SNPs (single nucleotide polymorphisms) and SVs (structure variants) calling for C57BI/6J control embryos and Mtrr<sup>{gt/gt}</sup> embryos
 
-### SNPs (single nucleotide polymorphisms) and SVs (structure variants) calling for C57BI/6J control embryos and Mtrr<sup>{gt/gt}</sup> embryos
-
-#### Sequencing Data Quality Control (FastQC, v0.11.5), Adapter trimming (Trim_galore, v0.6.4) and report summary (MultiQC, v1.4);
-=======
-Georgina E.T. Blake, Xiaohui Zhao, Hong wa Yung, Graham J. Burton, Anne C.Ferguson-Smith, Russell S. Hamilton and Erica D. Watson (2020) Genetic disruption of folate metabolism causes epigenetic instability in sperm and distinguishes HIRA as a biomarker of maternal epigenetic inheritance. <s>[[xx]](http://www.xx) [[DOI]](https://doi.org/xx)</s>
-
-Code Release to accompany paper: <s>[[DOI](xx)](xx)</s>
+### Sequencing Data Quality Control (FastQC, v0.11.5), Adapter trimming (Trim_galore, v0.6.4) and report summary (MultiQC, v.1.4);
 
 
-## Whole Genome Sequencing Analysis (WGS) <br>
- C57BI/6J (Control-1, Control-2), Mtrr<sup>{gt/gt}</sup> (800-1, 800-2, 800-3, 800-4, 800-5 and 800-6)
-### Part I: Whole Genome Sequencing (WGS) SNPs (singlenucleotide polymorphisms) calling for C57BI/6J control embryos and Mtrr<sup>{gt/gt}</sup> embryos
-
-#### Sequencing Data Quality Control (FastQC, v0.11.5), Adapter trimming (Trim_galore, v0.6.4) and report summary (MultiQC, v.1.4);
->>>>>>> a98c53aa9df94d9d5074a3bb37acf52611df6de7
-
-#### Sequencing Aligned to the C57Bl/6J reference genome(GRCm38, mm10) using Bowtie2(v2.3.4) with default parameters;
+### Sequencing Aligned to the C57Bl/6J reference genome(GRCm38, mm10) using Bowtie2(v2.3.4) with default parameters;
 
 Alignments processed using ClusterFlow [[GitHub](https://github.com/ewels/clusterflow)] [[DOI](http://dx.doi.org/10.12688/f1000research.10335.2)]
 
@@ -61,7 +48,7 @@ Example command line as used in clusterflow:
          METRICS_FILE=1${READ1/.fq.gz/}_bowtie2.bam_picardDupMetrics.txt \
         VALIDATION_STRINGENCY=LENIENT
 
-#### Mtrr region masking;
+### Mtrr region masking;
 
     PROJECT="CTR_edw23_0001"
     BEDFILE="chr13-mtrr-mask-region_20Mb.bed"
@@ -80,7 +67,7 @@ Example command line as used in clusterflow:
                    -L ${BEDFILE}
         done
 
-#### Run Manta Structural Variant Caller
+### Run Manta Structural Variant Caller
 
 Manta (v0.29.6) [[GitHub](https://github.com/Illumina/manta)] [[DOI](https://doi.org/10.1093/bioinformatics/btv710)]
 
@@ -94,7 +81,7 @@ Manta (v0.29.6) [[GitHub](https://github.com/Illumina/manta)] [[DOI](https://doi
     declare -a samples=("Control-1" "Control-2" "800-1" "800-2" "800-3" "800-4" "800-5" "800-6")
 
 
-###### Run Manta Prepare
+##### Run Manta Prepare
 
     for i in "${samples[@]}"
       do
@@ -103,7 +90,7 @@ Manta (v0.29.6) [[GitHub](https://github.com/Illumina/manta)] [[DOI](https://doi
         configManta.py --bam ${PROJECT}_${SAMPLE}.${BAMSTEM}.bam --referenceFasta ${GENOME} --runDir ${i}/${MANTAWORKDIR}
      done
 
-###### Run Manta workflow
+##### Run Manta workflow
 
     for i in "${samples[@]}"
       do
@@ -112,7 +99,7 @@ Manta (v0.29.6) [[GitHub](https://github.com/Illumina/manta)] [[DOI](https://doi
         runWorkflow.py --mode=local --jobs=10 --memGb=25
       done
 
-#### Remapped to the mm10 reference mouse genome using BWA (v480 0.7.15-r1144- dirty);
+### Remapped to the mm10 reference mouse genome using BWA (v480 0.7.15-r1144- dirty);
 
 Alignments processed using ClusterFlow [[GitHub](https://github.com/ewels/clusterflow)] [[DOI](http://dx.doi.org/10.12688/f1000research.10335.2)]
 
@@ -135,7 +122,7 @@ Example command line as used in clusterflow:
          METRICS_FILE=1${READ1/.fq.gz/}_GRCm38_bwa.bam_GRCm38_bwa_srtd.bam_picardDupMetrics.txt \
          VALIDATION_STRINGENCY=LENIENT        
 
-#### Reads were locally realigned and SNPs and short indels identified using GenomeAnalysisTK (GATK, v3.7) <br>
+### Reads were locally realigned and SNPs and short indels identified using GenomeAnalysisTK (GATK, v3.7) <br>
 
 > Set up some variables
 
@@ -146,7 +133,7 @@ Example command line as used in clusterflow:
     PICARDLOCN="picard-tools-2.2.4/"
     TMPDIR=$(pwd)
 
-###### Recalibrate Base Quality Scores
+##### Recalibrate Base Quality Scores
 
 > Example BAM file
 
@@ -219,7 +206,7 @@ Example command line as used in clusterflow:
          -BQSR ${INPUTBAM/MarkDups.RG.bam/MarkDups.RG.recal_data.table} \
          -o ${INPUTBAM/MarkDups.RG.bam/MarkDups.RG.recal.bam}
 
-###### Call Variants
+##### Call Variants
 
     INPUTBAM="Control-1.GRCm38_bwa_srtd.bam_MarkDups.RG.recal.bam"
 
@@ -232,7 +219,7 @@ Example command line as used in clusterflow:
          -ERC GVCF \
          -o ${INPUTBAM/recal.bam/recal.raw_variants.vcf}
 
-###### Joint Genotyping across all samples
+##### Joint Genotyping across all samples
 
     java -Djava.io.tmpdir=${TMPDIR} -jar ${GATKLOCN}/GenomeAnalysisTK.jar \
          -T GenotypeGVCFs \
@@ -248,13 +235,7 @@ Example command line as used in clusterflow:
          -o joint_genotyping_output.vcf
 
 
-
-
-<<<<<<< HEAD
-#### SNPs filter using vcftools (vcf-annotate), [Merge_Filter_Snp_Annotation.sh](https://github.com/xz289/Blake_Watson/blob/master/Scripts/Merge_Filter_Snp_Annotation.sh) <br>
-=======
-#### Step 6: SNPs filter using vcftools (vcf-annotate, [Merge_Filter_Snp_Annotation.sh](https://github.com/xz289/Blake_Watson/blob/master/Scripts/Merge_Filter_Snp_Annotation.sh) <br>
->>>>>>> a98c53aa9df94d9d5074a3bb37acf52611df6de7
+### SNPs filter using vcftools (vcf-annotate, [Merge_Filter_Snp_Annotation.sh](https://github.com/xz289/Blake_Watson/blob/master/Scripts/Merge_Filter_Snp_Annotation.sh) <br>
        - [x] 1-StrandBias [0.0001] ---Min P-value for strand bias
        - [x] 2-BaseQualBias [0.0002] ---Min P-value for BaseQ bias
        - [x] 3-MapQualBias [0.00001] ---Min P-value for mapQ bias
@@ -269,7 +250,7 @@ Example command line as used in clusterflow:
        - [x] H-HWE [0.0001] ---Min P-value for HWE(Hardy–Weinberg equilibrium) and (F\<0)
        - [x] v-VDB [0] ---Min Variant Distance bias
 
-#### Filtering the repeatitive and defind Heterozygous SNPs. R script [Exclued_SNPs_Homo_Dinu_SegDup_Het.R](Scripts/Exclued_SNPs_Homo_Dinu_SegDup_Het.R).
+### Extra filtering the repeatitive and defind Heterozygous SNPs. R script [Exclued_SNPs_Homo_Dinu_SegDup_Het.R](Scripts/Exclued_SNPs_Homo_Dinu_SegDup_Het.R).
       Reference: Oey, H., Isbel, L., Hickey, P., Ebaid, B. & Whitelaw, E. Genetic and epigenetic variation among inbred mouse littermates: identification of inter-individual differentially methylated regions. Epigenetics Chromatin 8, 54 (2015). <br>
        - [x] Simple repeats periodicity < 9bp;
        - [x] Homopolymer repeats >8 bp;
@@ -356,6 +337,7 @@ DMRs total number reduced from 893 to 459, (Mtrr<sup>{+/gt}</sup>, Mtrr<sup>{+/+
 > Table: Number of summary DMRs
 
 | Genotype   |  fileName | no. of DMRs|  
+| ----- | --- |--- |
 | Mtrr<sup>{+/gt}</sup>  |  [merge_C57_Vs_+gt_0.01_tab1_dmr_xy_29418_allcol.bed](MeDIPs/merge_C57_Vs_+gt_0.01_tab1_dmr_xy_29418_allcol.bed) | 203 |
 | Mtrr<sup>{+/+}</sup>   |  [merge_C57_Vs_++_0.01_xy_6518_tab1_dmr_allcol.bed](MeDIPs/merge_C57_Vs_++_0.01_xy_6518_tab1_dmr_allcol.bed) | 91 |
 | Mtrr<sup>{gt/gt}</sup> |  [merge_C57_Vs_gtgt_0.01_xy_allcol.bed](MeDIPs/merge_C57_Vs_gtgt_0.01_xy_allcol.bed) | 599|
@@ -363,6 +345,7 @@ DMRs total number reduced from 893 to 459, (Mtrr<sup>{+/gt}</sup>, Mtrr<sup>{+/+
 
 ### Step 3: hgLiftOver the mm9 ChIP/ATAC bw file to mm10, and clip the extra bps for MACS output, then compute profiles.
 | Script   |  fileName |  
+| ----- | --- |
 | bash  |  [BedClip_MACS_overlap.sh](Scripts/BedClip_MACS_overlap.sh) |
 | bash  |  [HgLiftOver_RandomDMRs_ProfilePlot.sh](Scripts/HgLiftOver_RandomDMRs_ProfilePlot.sh) |
 
