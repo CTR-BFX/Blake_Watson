@@ -235,7 +235,7 @@ Example command line as used in clusterflow:
          -o joint_genotyping_output.vcf
 
 
-### SNPs filter using vcftools (vcf-annotate, [Merge_Filter_Snp_Annotation.sh](https://github.com/xz289/Blake_Watson/blob/master/Scripts/Merge_Filter_Snp_Annotation.sh) <br>
+### SNPs filter using vcftools (vcf-annotate), [Merge_Filter_Snp_Annotation.sh](https://github.com/xz289/Blake_Watson/blob/master/Scripts/Merge_Filter_Snp_Annotation.sh) <br>
        - [x] 1-StrandBias [0.0001] ---Min P-value for strand bias
        - [x] 2-BaseQualBias [0.0002] ---Min P-value for BaseQ bias
        - [x] 3-MapQualBias [0.00001] ---Min P-value for mapQ bias
