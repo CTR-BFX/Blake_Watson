@@ -36,7 +36,6 @@ suppressPackageStartupMessages({
 library(VariantAnnotation)  ## (v1.28.13) mm10 Ref
 library(TxDb.Mmusculus.UCSC.mm10.knownGene)
 library(StructuralVariantAnnotation)
-library(FusionExpressionPlot) # grAddColumn
 library(segmentSeq)
 library(ggplot2)
 library(reshape)
@@ -44,7 +43,6 @@ library(vcfR)
 library(UpSetR)
 library(dplyr)
 library(cowplot)
-library(segmentSeq)
 library(GenomicRanges)
 })
 
@@ -180,13 +178,13 @@ colnames(SNPs_avg.dat) <- c("Exon", "Intergenic", "Intron", "SpliceSiteRegion", 
 rownames(SNPs_avg.dat) <- c("C57BL/6J", "Mtrrgt/gt")
 
 SVs_avg.dat$ID <- rownames(SVs_avg.dat) 
-SVs_avg.dat <- SVs_avg.dat[,c(2,6,7,5,4,3,1)]
+SVs_avg.dat <- SVs_avg.dat[,c(2,6,7,5,4,3,1,8)]
 SVs_avg.melt <- melt(SVs_avg.dat, id.var = 'ID')
 SVs_avg.melt <- within(SVs_avg.melt, variable <- factor(variable, 
                                                         c("SpliceSiteRegion","fiveUTR","threeUTR", "Exon","Promoter", "Intergenic","Intron"), 
                                                         ordered = TRUE))
 SNPs_avg.dat$ID <- rownames(SNPs_avg.dat) 
-SNPs_avg.dat <- SNPs_avg.dat[,c(3,2,5,1,6,7,4)]
+SNPs_avg.dat <- SNPs_avg.dat[,c(3,2,5,1,6,7,4,8)]
 SNPs_avg.melt <- melt(SNPs_avg.dat, id.var = 'ID')
 SNPs_avg.melt <- within(SNPs_avg.melt, variable <- factor(variable, 
                                                           c("SpliceSiteRegion","fiveUTR","threeUTR", "Exon","Promoter", "Intergenic","Intron"),
