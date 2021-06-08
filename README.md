@@ -1,4 +1,4 @@
-# Genetic disruption of folate metabolism causes epigenetic instability in sperm and distinguishes HIRA as a biomarker of maternal epigenetic inheritance
+# Defective folate metabolism causes germline epigenetic instability and distinguishes Hira as a phenotype inheritance biomarker
 **Georgina E.T. Blake<sup>1,2,†</sup>, Xiaohui Zhao<sup>1,2</sup>, Hong wa Yung<sup>1,2</sup>, Graham J. Burton<sup>1,2</sup>, Anne C.Ferguson-Smith<sup>2,3</sup>, Russell S. Hamilton<sup>2,3</sup> and Erica D. Watson<sup>1,2*</sup>** <br>
 <sup>1</sup> Department of Physiology, Development and Neuroscience, University of Cambridge, Cambridge, UK <br>
 <sup>2</sup> Centre for Trophoblast Research, University of Cambridge, Cambridge UK<br>
@@ -8,9 +8,8 @@
 
 ### Publication ###
 
-Georgina E.T. Blake, Xiaohui Zhao, Hong wa Yung, Graham J. Burton, Anne C.Ferguson-Smith, Russell S. Hamilton and Erica D. Watson (2020) Genetic disruption of folate metabolism causes epigenetic instability in sperm and distinguishes HIRA as a biomarker of maternal epigenetic inheritance.
-
-Code Release to accompany paper:[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3832249.svg)](https://doi.org/10.5281/zenodo.3832249)
+Code Release to accompany paper published in Nature Communication:[![DOI](https://doi.org/10.1038/s41467-021-24036-5)
+Github Code DOI:[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3832249.svg)](https://doi.org/10.5281/zenodo.3832249)
 
 
 ## Whole Genome Sequencing Analysis (WGS) <br>
