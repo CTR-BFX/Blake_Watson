@@ -8,9 +8,8 @@
 
 ### Publication ###
 
-Code Release to accompany paper published in Nature Communication:[![DOI](https://doi.org/10.1038/s41467-021-24036-5)
+Code Release to accompany paper published in Nature Communication:[![DOI](https://doi.org/10.1038/s41467-021-24036-5)](https://doi.org/10.1038/s41467-021-24036-5) <br>
 Github Code DOI:[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3832249.svg)](https://doi.org/10.5281/zenodo.3832249)
-
 
 ## Whole Genome Sequencing Analysis (WGS) <br>
  - [x] Samples: C57BI/6J (Control-1, Control-2), Mtrr<sup>{gt/gt}</sup> (800-1, 800-2, 800-3, 800-4, 800-5 and 800-6)
